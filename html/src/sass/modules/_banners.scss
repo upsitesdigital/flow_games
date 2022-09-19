@@ -1,0 +1,27 @@
+/*======================================
+  Banners
+======================================*/
+
+.banner {
+  text-align: center;
+  padding: 54px 0 58px 0;
+}
+
+@include breakpoint2($min:xl, $max:'') {}
+
+@include breakpoint2($min:lg, $max:xl) {}
+
+@include breakpoint2($min:md, $max:lg) {}
+
+@include breakpoint2($min:sm, $max:md) {}
+
+@include breakpoint2($min:xs, $max:sm) {
+  .banner {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@include breakpoint2($min:'', $max:xs) {}

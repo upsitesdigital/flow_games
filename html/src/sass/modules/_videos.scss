@@ -1,0 +1,149 @@
+/*======================================
+  Videos
+======================================*/
+
+.videos {
+  padding: 59px 0 0 0;
+  background: url(../img/pattern-video.jpg) top left repeat;
+  h4 {
+    font-family: $font-alt;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 0;
+    .icon {
+      width: 16px;
+      height: 32px;
+      margin: 2px 12px -2px 2px;
+      fill: $color-white;
+    }
+  }
+  .grid {
+    @include columns( $quant: 743px 1fr, $gutter: 0, $align: stretch, $template: 'video-featured video-list');
+    column-gap: 39px;
+    padding: 0 0 24px 0;
+    .box-featured {
+      .video-featured {
+        @include columns( $quant: 1fr 1fr, $gutter: 29px, $align: stretch, $template: '');
+        padding: 0 0 19px 0;
+        border-bottom: 1px solid rgba($color-white, 0.5);
+        .item {
+          a {
+            .thumb {
+              clip-path: url(#svgMask2);
+              position: relative;
+              img {
+                width: 100%;
+                height: auto;
+              }
+              .tag {
+                font-family: $font-alt;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                text-transform: uppercase;
+                color: #FEF500;
+                background: #131313;
+                border-radius: 4px;
+                padding: 8px;
+                position: absolute;
+                top: 9px;
+                left: 20px;
+              }
+            }
+            .content {
+              display: flex;
+              align-items: center;
+              padding: 18px 0 0 6px;
+              column-gap: 13px;
+              .icon {
+                width: 35px;
+                height: 35px;
+                margin: -4px 0 0 0;
+              }
+              h5 {
+                font-family: $font-alt;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 120%;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+      .link-youtube {
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #FFF9F9;
+        margin: 20px 0 0 5px;
+        display: flex;
+        align-items: center;
+        column-gap: 13px;
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .video-list {
+      .list-video {
+        li {
+          padding: 0 0 23px 0;
+          a {
+            @include columns( $quant: 49.4% 50.6%, $gutter: 0, $align: start, $template: '');
+            .thumb {
+              clip-path: url(#svgMask2);
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            .content {
+              padding: 0px 0 0 15px;
+              .tag {
+                font-family: $font-alt;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                text-transform: uppercase;
+                color: #FEF500;
+              }
+              h5 {
+                font-family: $font-alt;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint2($min:xl, $max:'') {}
+
+@include breakpoint2($min:lg, $max:xl) {}
+
+@include breakpoint2($min:md, $max:lg) {}
+
+@include breakpoint2($min:sm, $max:md) {}
+
+@include breakpoint2($min:xs, $max:sm) {}
+
+@include breakpoint2($min:'', $max:xs) {}

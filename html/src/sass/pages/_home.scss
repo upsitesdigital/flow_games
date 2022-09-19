@@ -1,0 +1,100 @@
+/*======================================
+  Home
+======================================*/
+
+.columns-home {
+  border-top: 1px solid #D2D2D2;
+  .grid {
+    @include columns( $quant: 63.25% 36.75%, $gutter: 0, $align: stretch, $template: 'list-post sidebar');
+    .list-post-home {
+      grid-area: list-post;
+      border-right: 1px solid #D2D2D2;
+      padding: 59px 50px 0 0;
+      h2 {
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #131313;
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 16px;
+          height: 32px;
+          margin: 2px 12px -2px 2px;
+        }
+      }
+      .list-post {
+        padding: 47px 0 0 2px;
+      }
+      .banner {
+        padding: 64px 0 16px 0;
+      }
+      .center {
+        text-align: center;
+        padding: 133px 0 116px 0;
+      }
+      .btn {
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FEFDFF;
+        background: #A200FF;
+        border-radius: 4px;
+        display: inline-flex;
+        padding: 12px 32px;
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin: 0 0 0 10px;
+          stroke: $color-white;
+        }
+      }
+    }
+    .sidebar-home {
+      grid-area: sidebar;
+      padding: 54px 0 0 54px;
+      h3 {
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #131313;
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 16px;
+          height: 32px;
+          margin: 2px 12px -2px 2px;
+        }
+      }
+      .list-reviews {
+        padding: 34px 0 0 3px;
+      }
+      .div {
+        margin: 3px 0 54px 0;
+      }
+      .banner {
+        padding: 36px 0 16px 0;
+      }
+    }
+  }
+}
+
+@include breakpoint2($min:xl, $max:'') {}
+
+@include breakpoint2($min:lg, $max:xl) {}
+
+@include breakpoint2($min:md, $max:lg) {}
+
+@include breakpoint2($min:sm, $max:md) {}
+
+@include breakpoint2($min:xs, $max:sm) {}
+
+@include breakpoint2($min:'', $max:xs) {}

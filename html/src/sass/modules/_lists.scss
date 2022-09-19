@@ -1,0 +1,263 @@
+/*======================================
+  Lists
+======================================*/
+
+.list-post {
+  li {
+    padding: 0 0 64px 0;
+    a {
+      @include columns( $quant: 36.4% 63.6%, $gutter: 0, $align: start, $template: '');
+      .thumb {
+        clip-path: url(#svgMask2);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .content {
+        padding: 2px 0 0 19px;
+        .tag {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: #A200FF;
+        }
+        h3 {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 22px;
+          padding: 4px 0 12px 0;
+          line-height: 140%;
+          color: #131313;
+        }
+        .meta {
+          display: flex;
+          align-items: center;
+          padding: 11px 0 0 0;
+          border-top: 1px solid #D2D2D2;
+          &:before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            background-color: $color-purple;
+            display: inline-block;
+          }
+          .author {
+            font-family: $font-main;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: #131313;
+            padding: 0 33px 0 8px;
+          }
+          .data {
+            font-family: $font-main;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #131313;
+          }
+        }
+      }
+    }
+    &.featured-post {
+      position: relative;
+      padding: 1px 3px 0 6px;
+      a {
+        display: block;
+        .thumb {
+          clip-path: none;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          .frame-post {
+            width: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 32px 48px 31px 52px;
+            width: 100%;
+          }
+        }
+        .content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 0 181px 38px 100px;
+          .tag {
+            font-family: $font-alt;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #FEF500;
+            background: #131313;
+            border-radius: 4px;
+            padding: 4px 8px;
+          }
+          h3 {
+            font-family: $font-alt;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 110%;
+            color: #FFFFFF;
+            padding: 8px 0 12px 0;
+          }
+          P {
+            font-family: $font-main-alt;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5px 2px 15px 0;
+          }
+          .meta {
+            display: flex;
+            align-items: center;
+            padding: 16px 0 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            &:before {
+              display: none;
+            }
+            .author {
+              font-family: $font-main;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              color: #FFFFFF;
+              padding: 0 33px 0 0px;
+            }
+            .data {
+              font-family: $font-main;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 100%;
+              text-transform: uppercase;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-reviews {
+  li {
+    padding: 0 0 52px 0;
+    a {
+      @include columns( $quant: 47.4% 52.6%, $gutter: 0, $align: start, $template: '');
+      .thumb {
+        clip-path: url(#svgMask2);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .content {
+        padding: 0px 0 0 17px;
+        .tag {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: #A200FF;
+        }
+        h4 {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+.list-most-read {
+  padding: 33px 0 0 3px;
+  li {
+    padding: 0 0 52px 0;
+    a {
+      @include columns( $quant: 58.8% 41.2%, $gutter: 0, $align: start, $template: '');
+      .thumb {
+        clip-path: url(#svgMask3);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .content {
+        padding: 0 27px 0 0;
+        .tag {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: #A200FF;
+        }
+        h4 {
+          font-family: $font-alt;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: #000000;
+          padding: 2px 0 8px 0;
+        }
+        .meta {
+          display: flex;
+          align-items: center;
+          padding: 8px 0 0 0;
+          border-top: 1px solid #D2D2D2;
+          &:before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            background-color: $color-purple;
+            display: inline-block;
+          }
+          .author {
+            font-family: $font-main-alt;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+            color: #131313;
+            padding: 0 0 0 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint2($min:xl, $max:'') {}
+
+@include breakpoint2($min:lg, $max:xl) {}
+
+@include breakpoint2($min:md, $max:lg) {}
+
+@include breakpoint2($min:sm, $max:md) {}
+
+@include breakpoint2($min:xs, $max:sm) {}
+
+@include breakpoint2($min:'', $max:xs) {}
