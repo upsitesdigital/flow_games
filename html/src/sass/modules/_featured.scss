@@ -44,6 +44,11 @@
       position: relative;
       //bottom: 0;
       margin: 0 0 50px 52px;
+      a {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
       .tag {
         background: #131313;
         border-radius: 4px;
@@ -189,9 +194,10 @@
           color: #9C9C9C;
           background: rgba(24, 28, 28, 0.5);
           border-radius: 4px;
+          border: 1px solid rgba(24, 28, 28, 0.5);
           display: flex;
           align-items: center;
-          padding: 8px 16px;
+          padding: 7px 15px;
           margin: 0 0 0 16px;
           .icon {
             width: 31px;
@@ -203,11 +209,23 @@
           }
           &.act {
             background: #A200FF;
+            border-color: #A200FF;
             color: #FEF500;
             .icon {
               stroke: #FEF500;
             }
           }
+          &:hover {
+            border-bottom-color: #FEF500;
+          }
+        }
+      }
+    }
+    #tabs {
+      .content {
+        display: none;
+        &.act {
+          display: block;
         }
       }
     }
@@ -217,6 +235,11 @@
           padding: 0 0 0 9px;
           @include columns( $quant: 1fr 1fr 1fr, $gutter: 23px, $align: stretch, $template: '');
           .item {
+            a {
+              &:hover {
+                opacity: 0.8;
+              }
+            }
             .content-image {
               position: relative;
               .image-post {

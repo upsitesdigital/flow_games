@@ -26,7 +26,37 @@ export default function() {
     centerMode: true,
     focusOnSelect: true,
     adaptiveHeight: true,
-    centerPadding: 0
+    centerPadding: 0,
+    asNavFor: '.slide-image-featured,.slide-text-featured',
+  });
+  const $textFeaturedslider = $('.slide-text-featured');
+  $textFeaturedslider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+    centerMode: false,
+    focusOnSelect: false,
+    adaptiveHeight: true,
+    centerPadding: 0,
+    asNavFor: '.slide-pag-featured,.slide-image-featured',
+  });
+  const $imageFeaturedslider = $('.slide-image-featured');
+  $imageFeaturedslider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+    centerMode: false,
+    focusOnSelect: false,
+    adaptiveHeight: true,
+    centerPadding: 0,
+    fade: true,
+    asNavFor: '.slide-pag-featured,.slide-text-featured',
   });
 
 

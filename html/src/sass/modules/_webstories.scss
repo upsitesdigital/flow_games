@@ -44,6 +44,10 @@
         margin: 0 0 0 10px;
         stroke: $color-white;
       }
+      @include animate($time: 0.3s);
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
   .slide-webstories {
@@ -95,6 +99,12 @@
           font-size: 22px;
           line-height: 140%;
           color: #FFFFFF;
+        }
+      }
+      a {
+        @include animate($time: 0.3s);
+        &:hover {
+          opacity: 0.8;
         }
       }
     }

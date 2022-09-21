@@ -62,9 +62,12 @@
             </ul>
           </div>
           <div class="seach-box">
-            <svg class="icon">
-              <use xlink:href="assets/img/icons.svg#search"></use>
-            </svg>
+            <input type="text" placeholder="Busca">
+            <a href="#">
+              <svg class="icon">
+                <use xlink:href="assets/img/icons.svg#search"></use>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="item menu">
@@ -98,8 +101,14 @@
   <main>
     <!-- featured -->
     <section class="featured">
+
       <div class="image">
-        <img src="assets/images/image-gow.jpg" alt="">
+        <div class="slide-image-featured">
+          <img src="assets/images/image-gow.jpg" alt="">
+          <img src="assets/images/image-fifa.jpg" alt="">
+          <img src="assets/images/image-gow.jpg" alt="">
+          <img src="assets/images/image-fifa.jpg" alt="">
+        </div>
       </div>
       <div class="container">
         <div class="box-featured">
@@ -107,13 +116,50 @@
             <img src="assets/img/box-featured.svg" alt="">
           </div>
           <div class="content">
-            <div class="relative">
-              <span class="tag">games</span>
-              <h2>Simply dummy text of the printing and typesetting industry. </h2>
-              <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-              <div class="meta">
-                <span class="author">Por Bruno Micali</span>
-                <span class="data">12.08.2022 às 14:25</span>
+            <div class="slide-text-featured">
+              <div class="relative">
+                <a href="#" class="tag">games</a>
+                <a href="#">
+                  <h2>Simply dummy text of the printing and typesetting industry. </h2>
+                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                </a>
+                <div class="meta">
+                  <span class="author">Por <a href="#">Bruno Micali</a></span>
+                  <span class="data">12.08.2022 às 14:25</span>
+                </div>
+              </div>
+              <div class="relative">
+                <a href="#">
+                  <span class="tag">games</span>
+                  <h2>Simply dummy text of the printing and typesetting industry. </h2>
+                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </a>
+              </div>
+              <div class="relative">
+                <a href="#">
+                  <span class="tag">games</span>
+                  <h2>Simply dummy text of the printing and typesetting industry. </h2>
+                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </a>
+              </div>
+              <div class="relative">
+                <a href="#">
+                  <span class="tag">games</span>
+                  <h2>Simply dummy text of the printing and typesetting industry. </h2>
+                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -155,26 +201,85 @@
                 <use xlink:href="assets/img/icons.svg#lightning"></use>
               </svg> Mais Destaques
             </h2>
-            <div class="btns">
-              <a href="#" class="btn act">
+            <div id="tabs-btn" class="btns">
+              <a href="#" data-tab="tab-games" class="btn act">
                 <svg class="icon">
                   <use xlink:href="assets/img/icons.svg#game-controller"></use>
                 </svg>Games
               </a>
-              <a href="#" class="btn">
+              <a href="#" data-tab="tab-esports" class="btn">
                 <svg class="icon">
                   <use xlink:href="assets/img/icons.svg#trophy"></use>
                 </svg>Esports
               </a>
-              <a href="#" class="btn">
+              <a href="#" data-tab="tab-cultura-pop" class="btn">
                 <svg class="icon">
                   <use xlink:href="assets/img/icons.svg#clapperboard"></use>
                 </svg>Cultura Pop
               </a>
             </div>
           </div>
-          <div class="tabs-content">
-            <div class="content">
+          <div id="tabs" class="tabs-content">
+            <div id="tab-games" class="content act">
+              <div class="grid">
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <a href="#">
+                        <div class="frame">
+                          <img src="assets/images/image-gow3.jpg" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="title">
+                      <a href="#tag" class="tag">GAMES</a>
+                      <a href="#">
+                        <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por <a href="#">Bruno Micali</a></span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <div class="frame">
+                        <img src="assets/images/image-gow3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="title">
+                      <span class="tag">GAMES</span>
+                      <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <div class="frame">
+                        <img src="assets/images/image-gow3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="title">
+                      <span class="tag">GAMES</span>
+                      <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab-esports" class="content">
               <div class="grid">
                 <div class="item">
                   <div class="content-image">
@@ -184,7 +289,7 @@
                       </div>
                     </div>
                     <div class="title">
-                      <span class="tag">GAMES</span>
+                      <span class="tag">Esports</span>
                       <h2>Simply dummy text of the printing and typesetting industry.</h2>
                     </div>
                   </div>
@@ -201,7 +306,7 @@
                       </div>
                     </div>
                     <div class="title">
-                      <span class="tag">GAMES</span>
+                      <span class="tag">Esports</span>
                       <h2>Simply dummy text of the printing and typesetting industry.</h2>
                     </div>
                   </div>
@@ -218,7 +323,62 @@
                       </div>
                     </div>
                     <div class="title">
-                      <span class="tag">GAMES</span>
+                      <span class="tag">Esports</span>
+                      <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab-cultura-pop" class="content">
+              <div class="grid">
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <div class="frame">
+                        <img src="assets/images/image-gow3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="title">
+                      <span class="tag">Cultura Pop</span>
+                      <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <div class="frame">
+                        <img src="assets/images/image-gow3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="title">
+                      <span class="tag">Cultura Pop</span>
+                      <h2>Simply dummy text of the printing and typesetting industry.</h2>
+                    </div>
+                  </div>
+                  <div class="meta">
+                    <span class="author">Por Bruno Micali</span>
+                    <span class="data">12.08.2022 às 14:25</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-image">
+                    <div class="image-post">
+                      <div class="frame">
+                        <img src="assets/images/image-gow3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="title">
+                      <span class="tag">Cultura Pop</span>
                       <h2>Simply dummy text of the printing and typesetting industry.</h2>
                     </div>
                   </div>
@@ -735,15 +895,17 @@
         </div>
         <div class="slide-webstories">
           <div class="item">
-            <div class="base">
-              <img src="assets/img/base-webstories.svg" alt="">
-            </div>
-            <div class="thumb">
-              <img src="assets/images/image-gow7.jpg" alt="">
-            </div>
-            <div class="content">
-              <h5>Simply dummy text of the printing and typesetting.</h5>
-            </div>
+            <a href="#">
+              <div class="base">
+                <img src="assets/img/base-webstories.svg" alt="">
+              </div>
+              <div class="thumb">
+                <img src="assets/images/image-gow7.jpg" alt="">
+              </div>
+              <div class="content">
+                <h5>Simply dummy text of the printing and typesetting.</h5>
+              </div>
+            </a>
           </div>
           <div class="item">
             <div class="base">

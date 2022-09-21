@@ -76,6 +76,10 @@
                 color: #FFFFFF;
               }
             }
+            @include animate($time: 0.3s);
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
       }
@@ -93,6 +97,10 @@
         .icon {
           width: 24px;
           height: 24px;
+        }
+        @include animate($time: 0.3s);
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
@@ -128,6 +136,10 @@
                 line-height: 140%;
                 color: #FFFFFF;
               }
+            }
+            @include animate($time: 0.3s);
+            &:hover {
+              opacity: 0.8;
             }
           }
         }
