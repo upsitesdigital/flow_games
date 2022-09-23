@@ -91,7 +91,7 @@
   grid-template-columns: $quant;
   gap: $gutter;
   align-items: $align;
-  @if ($template='') {
+  @if ($template!='') {
     grid-template-areas: $template;
   }
 }

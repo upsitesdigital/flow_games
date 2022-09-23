@@ -74,4 +74,35 @@ export default function() {
     adaptiveHeight: true,
     centerPadding: 0
   });
+
+  const $galleryslide = $('.wp-block-gallery .galley');
+  $galleryslide.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    // appendDots: $('.webstories .dots'),
+    arrows: true,
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+    centerMode: false,
+    focusOnSelect: true,
+    adaptiveHeight: true,
+    centerPadding: 0,
+    asNavFor: '.wp-block-gallery .pag-galley',
+  });
+  const $gallerypagslide = $('.wp-block-gallery .pag-galley');
+  $gallerypagslide.slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    // appendDots: $('.webstories .dots'),
+    arrows: true,
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+    centerMode: false,
+    focusOnSelect: true,
+    adaptiveHeight: true,
+    centerPadding: 0,
+    asNavFor: '.wp-block-gallery .galley',
+  });
 }
