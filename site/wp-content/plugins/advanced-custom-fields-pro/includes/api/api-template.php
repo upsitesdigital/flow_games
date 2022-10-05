@@ -57,24 +57,33 @@ function get_field( $selector, $post_id = false, $format_value = true ) {
 
 }
 
-/**
- *  This function is the same as echo get_field().
- *
- *  @since   1.0.3
- *  @date    29/01/13
- *
- *  @param string $selector The field name or key.
- *  @param mixed  $post_id  The post_id of which the value is saved against.
- *  @return  void
- */
+
+/*
+*  the_field()
+*
+*  This function is the same as echo get_field().
+*
+*  @type    function
+*  @since   1.0.3
+*  @date    29/01/13
+*
+*  @param   $selector (string) the field name or key
+*  @param   $post_id (mixed) the post_id of which the value is saved against
+*  @return  n/a
+*/
+
 function the_field( $selector, $post_id = false, $format_value = true ) {
+
 	$value = get_field( $selector, $post_id, $format_value );
 
 	if ( is_array( $value ) ) {
-		$value = implode( ', ', $value );
+
+		$value = @implode( ', ', $value );
+
 	}
 
 	echo $value;
+
 }
 
 /**
@@ -88,7 +97,7 @@ function the_field( $selector, $post_id = false, $format_value = true ) {
  * @param bool   $format_value Whether to format the field value.
  * @param bool   $load_value   Whether to load the field value.
  *
- * @return array|false $field
+ * @return array $field
  */
 function get_field_object( $selector, $post_id = false, $format_value = true, $load_value = true ) {
 	// Compatibility with ACF ~4.
@@ -170,7 +179,7 @@ function acf_maybe_get_field( $selector, $post_id = false, $strict = true ) {
 
 function acf_maybe_get_sub_field( $selectors, $post_id = false, $strict = true ) {
 
-	// bail early if not enough selectors
+	// bail ealry if not enough selectors
 	if ( ! is_array( $selectors ) || count( $selectors ) < 3 ) {
 		return false;
 	}
@@ -881,7 +890,7 @@ function acf_shortcode( $atts ) {
 	}
 
 	if ( is_array( $value ) ) {
-		$value = implode( ', ', $value );
+		$value = @implode( ', ', $value );
 	}
 
 	return $value;
@@ -1061,9 +1070,6 @@ function add_row( $selector, $row = false, $post_id = false ) {
 
 	// append
 	$value[] = $row;
-
-	// Paginated repeaters should be saved normally.
-	$field['pagination'] = false;
 
 	// update value
 	acf_update_value( $value, $post_id, $field );

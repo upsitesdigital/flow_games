@@ -265,7 +265,7 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 			);
 
 			?>
-		<div <?php echo acf_esc_attrs( $wrap ); ?>>
+		<div <?php acf_esc_attr_e( $wrap ); ?>>
 			<div id="wp-<?php echo esc_attr( $id ); ?>-editor-tools" class="wp-editor-tools hide-if-no-js">
 				<?php if ( $field['media_upload'] ) : ?>
 				<div id="wp-<?php echo esc_attr( $id ); ?>-media-buttons" class="wp-media-buttons">
@@ -308,44 +308,10 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 		*
 		*  @param   $field  - an array holding all the field's data
 		*/
+
 		function render_field_settings( $field ) {
-			acf_render_field_setting(
-				$field,
-				array(
-					'label'        => __( 'Default Value', 'acf' ),
-					'instructions' => __( 'Appears when creating a new post', 'acf' ),
-					'type'         => 'textarea',
-					'name'         => 'default_value',
-				)
-			);
 
-			acf_render_field_setting(
-				$field,
-				array(
-					'label'        => __( 'Delay initialization?', 'acf' ),
-					'instructions' => __( 'TinyMCE will not be initialized until field is clicked', 'acf' ),
-					'name'         => 'delay',
-					'type'         => 'true_false',
-					'ui'           => 1,
-					'conditions'   => array(
-						'field'    => 'tabs',
-						'operator' => '!=',
-						'value'    => 'text',
-					),
-				)
-			);
-
-		}
-
-		/**
-		 * Renders the field settings used in the "Presentation" tab.
-		 *
-		 * @since 6.0
-		 *
-		 * @param array $field The field settings array.
-		 * @return void
-		 */
-		function render_field_presentation_settings( $field ) {
+			// vars
 			$toolbars = $this->get_toolbars();
 			$choices  = array();
 
@@ -361,6 +327,18 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 				}
 			}
 
+			// default_value
+			acf_render_field_setting(
+				$field,
+				array(
+					'label'        => __( 'Default Value', 'acf' ),
+					'instructions' => __( 'Appears when creating a new post', 'acf' ),
+					'type'         => 'textarea',
+					'name'         => 'default_value',
+				)
+			);
+
+			// tabs
 			acf_render_field_setting(
 				$field,
 				array(
@@ -376,6 +354,7 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 				)
 			);
 
+			// toolbar
 			acf_render_field_setting(
 				$field,
 				array(
@@ -392,6 +371,7 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 				)
 			);
 
+			// media_upload
 			acf_render_field_setting(
 				$field,
 				array(
@@ -402,6 +382,24 @@ if ( ! class_exists( 'acf_field_wysiwyg' ) ) :
 					'ui'           => 1,
 				)
 			);
+
+			// delay
+			acf_render_field_setting(
+				$field,
+				array(
+					'label'        => __( 'Delay initialization?', 'acf' ),
+					'instructions' => __( 'TinyMCE will not be initialized until field is clicked', 'acf' ),
+					'name'         => 'delay',
+					'type'         => 'true_false',
+					'ui'           => 1,
+					'conditions'   => array(
+						'field'    => 'tabs',
+						'operator' => '!=',
+						'value'    => 'text',
+					),
+				)
+			);
+
 		}
 
 		/**
